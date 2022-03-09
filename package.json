@@ -19,8 +19,6 @@
   "homepage": "https://github.com/KevinGodek/social-network-api",
   "dependencies": {
     "express": "^4.17.1",
-    "moment": "^2.27.0",
-    "mongoose": "^5.9.23",
-    "nodemon": "^2.0.4"
+    "mongoose": "^5.9.23"
   }
 }
