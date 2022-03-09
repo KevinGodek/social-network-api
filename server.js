@@ -7,17 +7,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
-
 app.use(require('./routes'));
 
-// Connect mongoose
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', {
-  useFindAndModify: false,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+app.use(require("./routes"));
 
-// Log mongoose queries
-mongoose.set('debug', true);
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/social-network",
+  {
+    useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
-app.listen(PORT, () => console.log(` ************** Connected on localhost:${PORT} ************* `));
+// Use this to log mongo queries being executed
+mongoose.set("debug", true);
+
+app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
