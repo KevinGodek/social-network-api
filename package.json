@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KevinGodek/social-network-api"
+    "url": "git+https://github.com/KevinGodek/social-network-api.git"
   },
   "author": "Kevin Godek",
   "license": "ISC",
@@ -18,7 +19,7 @@
   },
   "homepage": "https://github.com/KevinGodek/social-network-api",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.9.23"
   }
 }
